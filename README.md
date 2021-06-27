@@ -1,4 +1,4 @@
-<p align="center"><img src="https://github.com/awais-amjed/color_animating_list_view/blob/master/demo-video.gif?raw=true"/></p>
+<p align="center"><img src="https://github.com/18-Bytes/color_animating_list_view/blob/master/demo-video.gif?raw=true"/></p>
 
 # Description
 
