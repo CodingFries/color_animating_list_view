@@ -1,0 +1,21 @@
+name: color_animating_list_view
+description: Creates a ListView that changes background color on Scrolling.
+version: 0.0.1
+homepage: https://github.com/18-Bytes/color_animating_list_view
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  visibility_detector: ^0.2.0
+  animate_do: ^2.0.0
+  flutter_color: ^2.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
