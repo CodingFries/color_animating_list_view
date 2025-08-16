@@ -6,12 +6,11 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: '18 Bytes',
-      home: HomePage(),
-    );
+    return MaterialApp(title: '18 Bytes', home: HomePage());
   }
 }
 
@@ -45,7 +44,7 @@ class HomePage extends StatelessWidget {
               Image.asset('images/anime.gif'),
               SizedBox(height: 50),
             ],
-          )
+          ),
         ],
         colors: [Colors.yellowAccent, Colors.lightBlue, Colors.pinkAccent],
       ),
