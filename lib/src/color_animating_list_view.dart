@@ -1,5 +1,4 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_color/flutter_color.dart';
 import 'package:visibility_detector/visibility_detector.dart';
@@ -27,12 +26,15 @@ class ColorAnimatingListView extends StatefulWidget {
 
 class _ColorAnimatingListViewState extends State<ColorAnimatingListView> {
   //Current Background Color - Transparent if there are no children.
-  late Color _color =
-      widget.colors.length > 0 ? widget.colors[0] : Colors.transparent;
+  late Color _color = widget.colors.length > 0
+      ? widget.colors[0]
+      : Colors.transparent;
 
   //List to store the visibility values of widgets on the screen.
-  late List<double> _visibility =
-      List.generate(widget.colors.length, (index) => 0.0);
+  late List<double> _visibility = List.generate(
+    widget.colors.length,
+    (index) => 0.0,
+  );
   final ScrollController _scrollController = ScrollController();
 
   @override
@@ -56,11 +58,12 @@ class _ColorAnimatingListViewState extends State<ColorAnimatingListView> {
         itemBuilder: (context, index) {
           return FadeIn(
             child: VisibilityDetector(
-                onVisibilityChanged: (VisibilityInfo info) {
-                  _visibility[index] = info.visibleFraction;
-                },
-                key: Key('Widget-$index'),
-                child: widget.children[index]),
+              onVisibilityChanged: (VisibilityInfo info) {
+                _visibility[index] = info.visibleFraction;
+              },
+              key: Key('Widget-$index'),
+              child: widget.children[index],
+            ),
             duration: widget.animationDuration,
           );
         },
