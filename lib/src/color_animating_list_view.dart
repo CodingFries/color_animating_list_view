@@ -26,7 +26,7 @@ class ColorAnimatingListView extends StatefulWidget {
 
 class _ColorAnimatingListViewState extends State<ColorAnimatingListView> {
   //Current Background Color - Transparent if there are no children.
-  late Color _color = widget.colors.length > 0
+  late Color _color = widget.colors.isNotEmpty
       ? widget.colors[0]
       : Colors.transparent;
 

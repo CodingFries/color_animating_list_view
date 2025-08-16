@@ -15,12 +15,13 @@ class MyApp extends StatelessWidget {
 }
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: ColorAnimatingListView(
+        colors: [Colors.yellowAccent, Colors.lightBlue, Colors.pinkAccent],
         children: [
           Column(
             children: [
@@ -46,7 +47,6 @@ class HomePage extends StatelessWidget {
             ],
           ),
         ],
-        colors: [Colors.yellowAccent, Colors.lightBlue, Colors.pinkAccent],
       ),
     );
   }
